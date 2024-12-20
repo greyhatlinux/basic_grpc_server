@@ -51,6 +51,9 @@ Start the client :
 > python3 client.py
 
 
+## Working : 
+![](./img/client.png)
+
 Note : 
 Incase you do cannot compile your message.proto, feel free to use my pre-compiled protos in the protos/ folder.
 Move the message_pb2 and message_pb2_grpc from protos/ to root directory, to make it accessible to server and client, or change the location in server.py and client.py
