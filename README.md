@@ -37,6 +37,9 @@ INSERT INTO users (name, email) VALUES
 ('Jane Smith', 'jane.smith@example.com');
 ```
 
+Make sure your Table looks like this : 
+![](./img/db.png)
+
 Generate your own protos from the message.proto
 > python3 -m grpc_tools.protoc --proto_path=. ./message.proto --python_out=. --grpc_python_out=
 
