@@ -9,19 +9,7 @@ from grpc_reflection.v1alpha import reflection
 class EmployeeService() :
     def GetEmployee(self, request, context):
         id = request.id
-
-        connection = None
-        try:
-
-            # if id == 1:
-            #     return pb2.Response(name="John", email="john@gmail.com")
-            # elif id == 2:
-            #     return pb2.Response(name="Alex", email="alex@gmail.com")
-            # else :
-            #     context.set_code(grpc.StatusCode.NOT_FOUND)
-            #     context.set_details(f"User id with {id} not found")
-            #     return pb2.Response(name="", email="")
-                                    
+        try:            
             print("Connecting to DB!")
             connection = mysql.connector.connect(
                 host='127.0.0.1',
@@ -39,9 +27,6 @@ class EmployeeService() :
         except Exception as e:
             print("Couldn't fetch records!")
             print(e)
-
-
-
 
 def server():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
