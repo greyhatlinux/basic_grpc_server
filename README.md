@@ -13,6 +13,26 @@ The client requets the server with id, which the server in turn fetches the mysq
 - I ran my installation on a virtuanenv, so that my system libraries do not get messed up
 
 
+### gRPC Server Implementation
+
+The server is implemented in `server.py`. It listens for incoming gRPC requests, fetches data from the MySQL database, and returns the data to the client.
+
+#### Key Components
+
+- **Proto File**: Defines the gRPC service and messages (`message.proto`).
+- **Server Logic**: Implements the gRPC service methods, and MySQL connection (`server.py`).
+
+### gRPC Client Implementation
+
+The client is implemented in `client.py`. It sends a request to the server with an ID and receives the corresponding data.
+
+#### Key Components
+
+- **Proto File**: Defines the gRPC service and messages (`message.proto`).
+- **Client Logic**: Sends requests and handles responses (`client.py`).
+
+
+
 Run the setup : 
 > pip install -r requirements.txt
 
